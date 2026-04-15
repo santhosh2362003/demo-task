@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 // Static files (Frontend) serve panna
-app.use(express.static(path.join(__currentDir, '')));
+app.use(express.static(path.join(__dirname,'../frontend')));
 
 // API Endpoint
 app.get('/api/data', (req, res) => {
