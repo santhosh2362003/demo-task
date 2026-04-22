@@ -1,6 +1,13 @@
 FROM node:18
+
 WORKDIR /usr/src/app
+
 COPY . .
-RUN cd backend && npm install express
+
+WORKDIR /usr/src/app/backend
+
+RUN npm install
+
 EXPOSE 3000
-CMD ["node", "backend/server.js"]
+
+CMD ["node", "server.js"]
